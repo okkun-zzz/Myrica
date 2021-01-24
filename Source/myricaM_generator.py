@@ -19,7 +19,7 @@
 #     ー一－（カタカナ・漢字・マイナス）の区別
 
 # version
-newfont_version      = "2.012.20180119"
+newfont_version      = "2.012.20180119+p1"
 newfont_sfntRevision = 0x00010000
 
 # set font name
@@ -408,7 +408,7 @@ for l in fGs.gsub_lookups:
 for l in fGs.gpos_lookups:
     fGs.removeLookup(l)
 
-autoHintAndInstr(fGs, (charZHKana, charZKKana, charHKKana, charZEisu))
+#autoHintAndInstr(fGs, (charZHKana, charZKKana, charHKKana, charZEisu))
 
 fGs.generate("../Work/modMgenPlus.ttf", '', generate_flags)
 os2_unicoderanges = fGs.os2_unicoderanges
